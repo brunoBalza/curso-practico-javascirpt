@@ -1,0 +1,12 @@
+[CLASE 6]
+
+    IDENTAR
+    es hacer en lineas distintas cada una de las variables o textos que estemos usando dentro de la misma linea de codigo, 
+    o sea usamos varias lineas para que esta linea no se vea tan larga, y sea mas legible
+
+    console.group("mensaje que le queremos poner al grupo");
+    console.groupEnd();
+
+        estos console.group sirven para agrupar mensajes de console.log en 1 solo mensaje para poder verlos en de forma separada dentro de la consola
+
+            la sistaxis de este es con el inicio y si o si tenemos que poner el console.groupEnd(); para darle un cierre a ese grupo, sino va tomar todo el codigo completo
