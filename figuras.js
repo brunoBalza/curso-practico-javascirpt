@@ -30,7 +30,7 @@ const alturaTriangulo = 5.5;
 
 const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
 
-const areaTriangulo = (baseTriangulo + alturaTriangulo) / 2;
+const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
 
 console.log(
     "los lados del triágulo miden: " 
@@ -41,11 +41,44 @@ console.log(
     + baseTriangulo 
     + " cm,"
 )
-// Separar de esta manera se llama IDENTAR
+    // Separar de esta manera se llama IDENTAR
 
 console.log("El perímetro del triágulo mide: " + perimetroTriangulo + " cm")
 
-console.log("El área del triágulo mide: " + areaCuadrado + " cm")
+console.log("El área del triágulo mide: " + areaTriangulo + " cm")
 
 console.groupEnd();
+
+// Código del circulo
+
+console.group ("Círculo");
+
+const radioCirculo = 4;
+
+const diametroCirculo = radioCirculo * 2;
+
+const PI = Math.PI;
+
+const perimetroCiruculo = 2 * PI * radioCirculo;
+
+const areaCirculo = PI * (radioCirculo * radioCirculo);
+
+// vamos a escribir la variable PI
+
+// const PI = 3.1415; esta es la forma mas facil de hacerlo, pero no la que deberiamos usar en JS
+
+// const PI = Math.PI; // esta es la forma correcta usando herramientas que nos provee JS
+
+
+console.log("El radio del círculo es: " + radioCirculo + " cm" );
+
+console.log("El diámetro del círculo es: " + diametroCirculo + " cm" );
+
+console.log("El perímetro del círculo es: " + perimetroCiruculo + " cm" );
+
+console.log("El área del círculo es: " + areaCirculo + " cm ^2" );
+
+console.groupEnd();
+
+
 
