@@ -10,3 +10,13 @@
         estos console.group sirven para agrupar mensajes de console.log en 1 solo mensaje para poder verlos en de forma separada dentro de la consola
 
             la sistaxis de este es con el inicio y si o si tenemos que poner el console.groupEnd(); para darle un cierre a ese grupo, sino va tomar todo el codigo completo
+
+[CLASE 7] ENCAPSULAR CODIGO EN FUNCIONES
+
+    vamos a usar el cogido de las figuras geometricas de la clase anterior, y vamos a generar las variables que habias establecido con numeros, pero ahora lo vamos a hacer con funciones.
+        
+        reempazamos las "conts" por "function"
+
+        ahora lo que va a pasar es que ya no vamos a tener las  constantes preestablecidas, sino que van a ser los usuarios los que van a llamar a la funcion y vamos a generar la variable que ellos deseen.
+
+    Hacer esto con las funciones, nos permite que YA NO SEA NECESARIO crear variables para los lados

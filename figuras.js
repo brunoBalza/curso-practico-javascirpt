@@ -2,17 +2,25 @@
 
 console.group("Cuadrado");
 
-const ladoCuadrado = 5;
+// const ladoCuadrado = 5;
 
-console.log("Los lados del cuadrado miden " + ladoCuadrado + " cm");
+// console.log("Los lados del cuadrado miden " + ladoCuadrado + " cm");
 
-const perimetroCuadrado = ladoCuadrado * 4;
+// const perimetroCuadrado = ladoCuadrado * 4;
 
-console.log("El perimetro del cuadrado es " + perimetroCuadrado + " cm");
+// console.log("El perimetro del cuadrado es " + perimetroCuadrado + " cm");
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
+function perimetroCuadrado (lado) {
+    return lado * 4;
+}
 
-console.log("El área del cuadrado es " + areaCuadrado + " cm cuadrados");
+// const areaCuadrado = ladoCuadrado * ladoCuadrado;
+
+// console.log("El área del cuadrado es " + areaCuadrado + " cm cuadrados");
+
+function areaCuadrado (lado) {
+    return lado * lado;
+}
 
 console.groupEnd();
 
@@ -20,32 +28,36 @@ console.groupEnd();
 
 console.group("Triángulo");
 
-const ladoTriangulo1 = 6;
+// const ladoTriangulo1 = 6;
 
-const ladoTriangulo2 = 6;
+// const ladoTriangulo2 = 6;
 
-const baseTriangulo = 4;
+// const baseTriangulo = 4;
 
-const alturaTriangulo = 5.5;
+// const alturaTriangulo = 5.5;
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
+// const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
 
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+// const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
 
-console.log(
-    "los lados del triágulo miden: " 
-    + ladoTriangulo1 
-    + " cm, " 
-    + ladoTriangulo2 
-    + " cm, " 
-    + baseTriangulo 
-    + " cm,"
-)
-    // Separar de esta manera se llama IDENTAR
+// console.log(
+//     "los lados del triágulo miden: " 
+//     + ladoTriangulo1 
+//     + " cm, " 
+//     + ladoTriangulo2 
+//     + " cm, " 
+//     + baseTriangulo 
+//     + " cm,"
+// )
+//     // Separar de esta manera se llama IDENTAR
 
-console.log("El perímetro del triágulo mide: " + perimetroTriangulo + " cm")
+// console.log("El perímetro del triágulo mide: " + perimetroTriangulo + " cm")
 
-console.log("El área del triágulo mide: " + areaTriangulo + " cm")
+// console.log("El área del triágulo mide: " + areaTriangulo + " cm")
+
+function perimetroTriangulo (lado1, lado2, base) {
+    return lado1 + lado2 + base;
+}
 
 console.groupEnd();
 
@@ -68,7 +80,6 @@ const areaCirculo = PI * (radioCirculo * radioCirculo);
 // const PI = 3.1415; esta es la forma mas facil de hacerlo, pero no la que deberiamos usar en JS
 
 // const PI = Math.PI; // esta es la forma correcta usando herramientas que nos provee JS
-
 
 console.log("El radio del círculo es: " + radioCirculo + " cm" );
 
