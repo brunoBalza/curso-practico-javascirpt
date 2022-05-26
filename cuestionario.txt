@@ -1,0 +1,284 @@
+[CLASE 2] CUESTIONARIO
+
+    ¿Qué es una variable y para qué sirve?
+        Un espacio reservado de memoria donde se almacena informacion
+
+    ¿Cuál es la diferencia entre declarar e inicializar una variable?
+        Una variable se declara para reservar su espacio de memorio, se inicializa para guardar info en ese espacio.
+
+    ¿Cuál es la diferencia entre sumar números y concatenar strings?
+        Sumar numeros como operacion matematica, concatenar es cuando se juntan dos textos para formar uno mismo
+
+    ¿Cuál operador me permite sumar o concatenar?
+        +
+
+    2. Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
+    3. Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
+
+        Nombre -> Bruno
+        Apellido -> Balzarelli
+        Nombre de usuario en Platzi -> Brunobalza
+        Edad -> 31  
+        Correo electrónico -> "brunobalza@tuki.com"
+        Mayor de edad -> true
+        Dinero ahorrado -> 100
+        Deudas -> 50
+
+        let nombre = "Bruno";
+        let apellido = "Balzarelli";
+        let usuario = "Brunobalza";
+        let edad = 31;
+        let mail = "brunobalza@tuki.com";
+        let mayoria = true;
+        let dineroAhorrado = 100;
+        let deudas = 50;
+
+    4. Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
+        Nombre completo (nombre y apellido)
+        Dinero real (dinero ahorrado menos deudas)
+
+        let nombreCompleto = `${nombre} ${apellido}`;  (Tener en cuenta esta sintaxis en los strings)
+        let dineroTotal = dineroAhorrado - duedas;
+
+    5. Responde las siguientes preguntas en la sección de comentarios:
+
+    ¿Qué es una función?
+        Un bloque de código que hace una serie de procedimientos
+
+    ¿Cuándo me sirve usar una función en mi código?
+        Cuando se repite varias lineas de codigo en el proyecto
+
+    ¿Cuál es la diferencia entre parámetros y argumentos de una función?
+        Parametro es una variable que está en la definición de una función,
+        Argumento son los datos que se le pasan a los parametros de una función
+
+    FUNCIONES
+
+    6. Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por      parámetros y argumentos en una función:
+
+            const name = "Juan David";
+            const lastname = "Castro Gallego";
+            const completeName = name + lastname;
+            const nickName = "juandc";
+
+            console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickName + ".");
+
+            RESPUESTA
+
+            function newFunction(name, lastname, nickname){
+                let completeName = name + ' ' + lastname
+                console.log(`Mi nombre es ${completeName}, pero prefiero que me digas "${nickname}". `)
+            }
+
+            greetingUser("Juan David", "Castro Gallego", "juandc" )
+
+                ATENDER QUE DESPUES DE DECLARAR, HAY QUE PASAR LAS variables
+
+    CONDICIONALES
+
+        ¿Qué es una condicional?
+            .Es un grupo de instrucciones que se ejecutan dependiendo del valor booleano (falso o verdadero) de una determinada expresión. Dicha expresión suele ser una comparación o una afirmación.
+            .Un grupo de instrucciones que se ejecuta segun el resultado de una evaluación
+
+        ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+            If, else if, switch y ternario
+
+                if, if else, else: Es una elección de un camino. Se cumple algo para que se elija este camino.
+                switch: Se usa para elegir un camino de lógica entre muchas igualdades.
+
+                Se diferencian en que if, if else, else se acostumbran a usar para todo tipo de compararaciones y switch solo para igualdades (cabe decir que no fue creado solo para que ese use de esta forma).
+
+        ¿Puedo combinar funciones y condicionales?
+            SI
+
+        Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+
+        const tipoDeSuscripcion = "Basic";
+
+        switch (tipoDeSuscripcion) {
+        case "Free":
+            console.log("Solo puedes tomar los cursos gratis");
+            break;
+        case "Basic":
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+            break;
+        case "Expert":
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+            break;
+        case "ExpertPlus":
+            console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+            break;
+        }
+
+        RESPUESTA
+
+       const tipoDeSuscripcion = "basic";
+        if(tipoDeSuscripcion === 'Free'){
+            console.log("Solo puedes tomar los cursos gratis");
+        }
+        elseif (tipoDeSuscripcion === 'Basic') {
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+        } 
+        elseif (tipoDeSuscripcion === 'Expert') {
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+        } 
+        elseif (tipoDeSuscripcion === 'Expert+') {
+            console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+        }
+
+        SOLO CON IF 
+
+        const tipoDeSuscripcion = 'basic';
+        if (tipoDeSuscripcion === 'Free') {
+            console.log('Solo puedes tomar los cursos gratis');
+        } else {
+            if (tipoDeSuscripcion === 'Basic') {
+                console.log('Puedes tomar casi todos los cursos de Platzi durante un mes');
+            } else {
+                if (tipoDeSuscripcion === 'Expert') {
+                console.log('Puedes tomar casi todos los cursos de Platzi durante un año');
+                } else {
+                    if (tipoDeSuscripcion === 'Expert+') {
+                    console.log('Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año');
+                    }
+                }
+            }
+        }
+
+    CICLOS
+
+        ¿Qué es un ciclo?
+            Es un código que permite repetir determinadas estructuras un número “n” de veces, o en función de una condición.
+
+        ¿Qué tipos de ciclos existen en JavaScript?
+            for
+            for of
+            for in
+            while
+            do-while
+
+        ¿Qué es un ciclo infinito y por qué es un problema?
+            Es un ciclo que nunca se va a detener, puede causar que nuestro ordenador se apague por exceso consumo de memoria en el navegador
+
+        ¿Puedo mezclar ciclos y condicionales?
+            SI
+
+        Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+        for (let i = 0; i < 5; i++) {
+            console.log("El valor de i es: " + i);
+        }
+
+        for (let i = 10; i >= 2; i--) {
+            console.log("El valor de i es: " + i);
+        }
+
+        RESPUESTA
+
+            vari = 0
+
+            while (i < 5){
+                console.log(`EL valor de i es-: ${i}`)
+                i++
+            }
+
+
+            var j = 10
+
+            while(j >= 2){
+                console.log(`EL valor de i es-: ${j}`)
+                j--
+            }
+
+        Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+
+        respuesta (1)
+
+        let respuesta = 0;
+        do {
+            respuesta = prompt('¿Cual es el resultado de 2 + 2?')
+            respuesta *= 1;
+        } while (!(respuesta === 4))
+
+        respuesta (2)
+
+        var endOfProgram = false
+
+        while(!endOfProgram){
+
+        var respuesta = Number(prompt("¿Cuánto es 2 + 2? "))
+            if (respuesta == 4){
+            console.log("¡Correcto!")
+            endOfProgram = true
+            }
+            else{
+                console.log('Volvemos a empezar...')
+            }
+        }
+
+    LISTAS
+
+    ¿Qué es un array?
+        Es un conjunto de datos, homogéneos o no homogéneos (del mismo tipo) que se almacenan en memoria.
+
+    ¿Qué es un objeto?
+        Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor.
+
+    ¿Cuándo es mejor usar objetos o arrays?
+        Cuando se necesite replicar un conjunto de datos con distintas propiedades, y funcionalidades facilemente identificables es mejor usar objetos.
+
+    ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+        SI
+
+    Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+        const array1 = ['a', 'b', 'c'];
+        function imprimirPrimerElemento(array){
+                console.log(array[0])
+        }
+        imprimirPrimerElemento(array1)
+
+    Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+    1   const array1 = ['a', 'b', 'c'];
+        function imprimirArray(array){
+            array.forEach(element => console.log(element))
+        }
+        imprimirArray(array1)
+
+    2   let frutas = ['Pera', 'Manzana', 'Sandia'];
+        const unaFuncion = (array) => {
+        array.forEach((elem) => {
+            console.log(elem);
+            });
+        };
+
+        unaFuncion(frutas);
+    
+    Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
+
+    1   let persona = {
+            nombre: 'Oscar',
+            apellido: 'Aguilar',
+            edad: 21
+        }
+        const unaFuncion = (objeto) => {
+            Object.values(objeto).forEach((elem) => {
+                console.log(elem);
+            });
+        };
+
+        unaFuncion(persona);   
+
+    2   let usuario = {
+            nombre: 'Eduardo',
+            apellido: 'Apén',
+            edad: 23, 
+
+        }
+
+        function imprimirObjeto(objeto){
+            Object.values(objeto).forEach(elemento => console.log(elemento))
+        }
+
+        imprimirObjeto(usuario)
