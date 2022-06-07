@@ -20,3 +20,66 @@
         ahora lo que va a pasar es que ya no vamos a tener las  constantes preestablecidas, sino que van a ser los usuarios los que van a llamar a la funcion y vamos a generar la variable que ellos deseen.
 
     Hacer esto con las funciones, nos permite que YA NO SEA NECESARIO crear variables para los lados
+
+[CLASE 8] INTERACTUANDO JS CON HTML
+
+    Tener muy en cuenta la sintaxis del HTML, por mas que sea curso de JS no pasarlo por alto, la practica hace al experto,
+
+    Cuando creamos un input, por dentro le ponemos botones, si no especificamos de que tipo de botones se trata por defecto el explorador lo determina como "submit"
+
+        que significa que sean de tipo "submit": este va a recargar la pagina, porque lo que hace este, es enviar la informacion a alguna lado (el que nosotros le indiquemos), 
+
+        lo que tenemos que hacer es cambiar el tipo del boton y escribirle que sea del tipo "button"
+
+    DAR ID AL INPUT,
+
+        esto lo tenemos que hacer si o si, siempre
+
+            sirve para conectar el input con el label, hace q al poner el cursor sobre el label, se identifica toda la casilla del input
+
+            en la etiqueta "label" se conecta con el atributo "for=xxx"
+
+    Para que el usuario al hacer click al boton, le resuelva la pregunta.
+        
+        lo que debemos hacer es que ese boton llame a la funcion que nosotros deseamos, eso lo hacemos con el atributo "ONCLICK".
+
+            este "onclick" tiene que tener el nombre que nosotros le ponemos a la funcion, de esa forma la conectamos
+
+    AHORA CREAMOS LA FUNCION,
+
+        pero lo que necesitamos dentro de las funciones son los valores que los usuarios nos van a dar en el explorador
+
+        ¿Como hacemos esto?
+
+            primero tenemos que saber que para conseguir un elemento, lo hacemos con "getElementeById(nombre del elemento)
+
+            document.getElementeById("InputCuadrado");
+
+        ¿ahora para ponerlo en la funcion?
+
+            Lo que hacemos es crear una constante con ese elemento:
+
+                const input = document.getElementeById("InputCuadrado");
+
+        de esta forma tenemos en forma de variable nuestro elemento que nos va a servir para generar la funcion
+
+            IMPORTANTE
+
+                cuando llamamos un dato de esta forma, lo que hacemos es traernos todo el elemento completo, o sea, la linea del codigo entera
+
+                pero lo que nosotros queremos es solamente el valor que va darnos el usuario
+
+                para eso lo hacemos es generar una nueva variable con el atributo del valor que nos va a dar la variable anterior, por eso es que tenemos que llamar dentro de esta segunda variable, a la primera e indicar si valor
+
+                    const = value = input.value
+
+        Ahora vamos a hacer que cada vez que ejecuten la funcion (hagan click), se les dispare una alerta que les diga el resultado
+
+            para esto primero necesitamos definir el perimetro de nuestro cuadrado, ya habias generado una funcion con esta ecuacion, la vamos a volver a llamar
+
+                const perimetro = perimetroCuadrado() "los parecentesis son para indicar que estamos hablando de una funcion"
+
+                pero esos parentesis no van vacios esta vez, sino que son los parametros que la funcion va a ejecutar para dar el resultado, y esos parametros son los valores que el usuario nos ha dado.
+
+                    entonces tenemos que traernos ese valor, recordando que esta en input.value
+
