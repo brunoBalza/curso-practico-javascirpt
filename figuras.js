@@ -91,6 +91,7 @@ console.log("El área del círculo es: " + areaCirculo + " cm ^2" );
 
 console.groupEnd();
 
+<<<<<<< HEAD
 // Aqui interactuamos con HTML
 
 function calcularPerimetroCuadrado () {
@@ -107,4 +108,7 @@ function calcularAreaCuadrado () {
     const area = areaCuadrado(value);
     alert(area);
 }
+=======
+
+>>>>>>> 158c7f26ebe3649127c20a684b0669f020752322
 

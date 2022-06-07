@@ -19,6 +19,7 @@
 
         ahora lo que va a pasar es que ya no vamos a tener las  constantes preestablecidas, sino que van a ser los usuarios los que van a llamar a la funcion y vamos a generar la variable que ellos deseen.
 
+<<<<<<< HEAD
     Hacer esto con las funciones, nos permite que YA NO SEA NECESARIO crear variables para los lados
 
 [CLASE 8] INTERACTUANDO JS CON HTML
@@ -83,3 +84,6 @@
 
                     entonces tenemos que traernos ese valor, recordando que esta en input.value
 
+=======
+    Hacer esto con las funciones, nos permite que YA NO SEA NECESARIO crear variables para los lados
+>>>>>>> 158c7f26ebe3649127c20a684b0669f020752322
