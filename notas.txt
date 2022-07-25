@@ -83,3 +83,12 @@
 
                     entonces tenemos que traernos ese valor, recordando que esta en input.value
 
+[CLASE 12] conexion con JS again}
+
+inner.Text
+    Es una FUNCION, pero al mismo tpo se comporta como un atributo
+
+    lo que hace es que desde la consola, buscamos el id de un elemento, en este caso seria el del P.
+    a ese ID le agregamos .innerText, y lo que va a pasar es que desde la consola, se le va a agregar un texto, como si lo estuviesemos editando desde html
+
+    en este caso, lo que va a pasar es que, mientras que no escribamos nada, para conseguir el descuento, no va a aparecer nada en el document, pero en cuanto el usuario escriba y le de click al boton, va a aparecer el P porque este "innerText" lo que va a hacer es imprimir dentro de P el texto que concatenamos.
